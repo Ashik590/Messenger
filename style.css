@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background: url("./img/bg.jpg") center center no-repeat;
+    background-size: cover;
+    gap: 25px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    padding: 10px 30px;
+    width: fit-content;
+    margin: auto;
+    font-weight: 700;
+    background: #00e17859;
+    color: #fff;
+    border-radius: 0 33px;
+    font-size: 28px;
+    box-shadow: 0px 0px 28px 6px #ffffffb8, 0px 0px 7px 0px #fff;
+}
+main {
+    max-width: 700px;
+    width: 100%;
+    background: #222e35bf;
+    border-radius: 22px;
+    border: 3px solid #fff;
+    margin: auto;
+}
+main h3 {
+    font-size: 23px;
+}
+.heading{
+    padding: 10px 15px;
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.joined {
+    font-size: 16px;
+    padding: 4px 7px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: all .2s ease;
+}
+.joined:hover{
+    background: #fff;
+    color: #222;
+}
+.list {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    padding: 13px;
+    font-size: 13px;
+    line-height: 14px;
+    background: #000801b9;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+.listJoined:hover .list{
+    opacity: 1;
+    pointer-events: all;
+}
+.list ul{
+    display: grid;
+    gap: 8px;
+    padding-left: 15px;
+}
+.list li{
+    list-style: circle;
+    font-weight: 600;
+}
+.chat {
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+    
+    overflow: auto;
+}
+.profile {
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.person {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    gap: 11px;
+}
+.all {
+    background: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+.msg {
+    font-size: 15px;
+}
+.date{
+    font-size: 12px;
+    color: rgb(156, 156, 156);
+    font-weight: 500;
+    line-height: 18px;
+}
+.chatParent{
+    height: calc(100vh - 175px);
+    overflow: auto;
+}
+.chatParent::-webkit-scrollbar{
+    width: 15px;
+    background: #ddd;
+    border-radius: 22px;
+    border: 2px solid rgb(0, 78, 46);
+}
+.chatParent::-webkit-scrollbar-thumb{
+    background: rgb(12, 206, 125);
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 8px 0px rgb(12, 70, 0);
+}
+.person.me .profile{
+    /* grid-column: ; */
+}
